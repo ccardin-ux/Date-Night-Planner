@@ -41,6 +41,9 @@ jobs:
         env:
           BASE_PATH: /Date-Night-Planner/
 
+      - name: Add single-page app fallback
+        run: cp artifacts/year-of-dates/dist/public/index.html artifacts/year-of-dates/dist/public/404.html
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
